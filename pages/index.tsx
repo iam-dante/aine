@@ -10,7 +10,7 @@ export default function Home() {
         checked={enabled}
         onChange={setEnabled}
         className={`${
-          enabled ? "bg-slate-200" : "bg-pink-500"
+          enabled ? "bg-gray-400" : "bg-pink-800"
         } relative inline-flex h-9 w-16 items-center rounded-full`}
       >
         <span
@@ -56,7 +56,7 @@ export default function Home() {
 
   function Chips(props: { name: string }) {
     return (
-      <span className="flex items-center justify-center rounded-full border border-pink-200 bg-gray-100/70 px-2.5 py-2 text-xs dark:text-white md:text-base">
+      <span className=" dark:bg-transparent flex items-center justify-center rounded-full border border-pink-200 bg-gray-100/70 px-2.5 py-2 text-xs dark:text-white md:text-base">
         {props.name}
       </span>
     );
@@ -64,7 +64,7 @@ export default function Home() {
 
   function Cards(props: { name: string; icon: any; dec: string }) {
     return (
-      <div className="flex flex-col  items-center justify-center space-y-4 bg-white p-12 shadow-xl shadow-pink-300/20 hover:shadow-2xl hover:shadow-pink-400/40 bg-transparent">
+      <div className="flex flex-col  items-center justify-center space-y-4 bg-white p-12  shadow-pink-300/20 hover:shadow-2xl hover:shadow-pink-400/40 bg-transparent">
         {props.icon}
         <h1 className="text-2xl dark:text-white">{props.name}</h1>
         <h1 className="text-center text-slate-500 dark:text-white">
@@ -74,16 +74,18 @@ export default function Home() {
     );
   }
 
+
+
   return (
-    <body className={`${enabled ? "" : ""}  h-auto`}>
-      <main className="dark:bg-[#2b2429]">
-        <div className="z-100 fixed top-0 z-10  flex w-full items-center justify-between bg-white/40 py-2 px-6 md:px-12">
+    <body className={`${enabled ? "" : "dark"} h-auto overflow-x-hidden relative`}>
+      <main className=" bg-gradient-to-b from-[#fff] to-[#fff] dark:from-[#1A0B29] dark:to-[#07000A]">
+        <div className=" z-100 fixed top-0 z-10 flex  w-full items-center justify-between bg-white/20 py-2 px-6 dark:bg-black/20 md:px-12">
           <Image src="/image/logo.png" alt="" width={90} height={60} />
           <ThemeSwitch />
         </div>
         {/* <div className="absolute top-0 right-0 bg-red-400 z-0 h-[616px] w-[616px] backdrop-opacity-40 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 "></div> */}
-        {/* <div className="BackgroundGlow_glow2__5Nj0b BackgroundGlow_glow__OIbSB "></div> */}
-        {/* <div className="BackgroundGlow_radar__oFQmz"></div> */}
+        <div className="BackgroundGlow_glow2__5Nj0b BackgroundGlow_glow__OIbSB "></div>
+        <div className="BackgroundGlow_radar__oFQmz"></div>
 
         <div className="pt-48 lg:px-48">
           <div className="p-12">
@@ -126,7 +128,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    className="h-12 w-12"
+                    className="h-12 w-12 dark:text-white"
                   >
                     <path
                       stroke-linecap="round"
@@ -152,7 +154,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    className="h-12 w-12"
+                    className="h-12 w-12 dark:text-white"
                   >
                     <path
                       stroke-linecap="round"
@@ -173,7 +175,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    className="h-12 w-12"
+                    className="h-12 w-12 dark:text-white"
                   >
                     <path
                       stroke-linecap="round"
@@ -194,7 +196,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    className="h-12 w-12"
+                    className="h-12 w-12 dark:text-white"
                   >
                     <path
                       stroke-linecap="round"
@@ -215,7 +217,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    className="h-12 w-12"
+                    className=" h-12 w-12 dark:text-white"
                   >
                     <path
                       stroke-linecap="round"
@@ -235,7 +237,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    className="h-12 w-12"
+                    className="h-12 w-12 dark:text-white"
                   >
                     <path
                       stroke-linecap="round"

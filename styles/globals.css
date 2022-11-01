@@ -1,50 +1,201 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-/* .BackgroundGlow_glow2__5Nj0b {
-    background-image: linear-gradient(to right,var(--tw-gradient-stops));
-    --tw-gradient-from: #fb11b8;
-    --tw-gradient-to: rgba(251,17,184,0);
-    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
-    --tw-gradient-to: #5252ff;
-    filter: blur(140px);
-    animation-duration: 19s;
-    animation-name: BackgroundGlow_glow2Anim__LrGGp;
-    width: 400px;
-    height: 400px;
-    margin-top: 0;
-    margin-right: 0;
-} */
-/* .BackgroundGlow_glow__OIbSB {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
+@keyframes BackgroundGlow_glow1Anim__gEJoL {
+  0% {
+    opacity: 0.6;
+    transform: scale(100%) translate(0);
+  }
+  25% {
+    transform: translate(-8%, 34%);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(150%, 87%) translate(-16%, -7%);
+  }
+  75% {
+    transform: translate(-9%, -27%);
+  }
+  to {
+    opacity: 0.6;
+    transform: scale(100%) translate(0);
+  }
+}
+@keyframes BackgroundGlow_glow2Anim__LrGGp {
+  0% {
+    opacity: 0.75;
+    transform: scale(100%) translate(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(80%, 160%) translate(-55%, -10%);
+  }
+  to {
+    opacity: 0.75;
+    transform: scale(100%) translate(0);
+  }
+}
+.BackgroundGlow_glow__OIbSB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+.BackgroundGlow_glow1__bDz7X {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #e672f7;
+  --tw-gradient-to: rgba(230, 114, 247, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5252ff;
+  filter: blur(200px);
+  animation-duration: 23s;
+  animation-name: BackgroundGlow_glow1Anim__gEJoL;
+  width: 616px;
+  height: 616px;
+  margin-top: -344px;
+  margin-right: -376px;
+}
+@media (min-width: 640px) {
+  .BackgroundGlow_glow1__bDz7X {
+    margin-top: -100px;
+    margin-right: -182px;
+  }
+}
+.BackgroundGlow_glow2__5Nj0b {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #fb11b8;
+  --tw-gradient-to: rgba(251, 17, 184, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5252ff;
+  filter: blur(140px);
+  animation-duration: 19s;
+  animation-name: BackgroundGlow_glow2Anim__LrGGp;
+  width: 400px;
+  height: 400px;
+  margin-top: 0;
+  margin-right: 0;
+}
+@keyframes BackgroundGlow_radarAnim__TpXAJ {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.05;
+  }
+  to {
+    opacity: 0;
+    transform: scale(100%);
+  }
+}
+.BackgroundGlow_radar__oFQmz {
+  position: absolute;
+  z-index: 0;
+  width: 1600px;
+  height: 1600px;
+  top: -800px;
+  right: -800px;
+  background: radial-gradient(
+    circle,
+    hsla(0, 0%, 100%, 0) 0,
+    hsla(0, 0%, 100%, 0) 50%,
+    #fff 60%,
+    #fff 66%,
+    hsla(0, 0%, 100%, 0) 72%
+  );
+  animation-duration: 16s;
+  animation-name: BackgroundGlow_radarAnim__TpXAJ;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+.EcosystemCallouts_tile__4XBee {
+  border-bottom-width: 1px;
+}
+.EcosystemCallouts_tile__4XBee:last-child {
+  border-bottom-width: 0;
+}
+@media (min-width: 640px) {
+  .EcosystemCallouts_tile__4XBee:nth-child(2n) {
+    border-left-width: 1px;
+  }
+  .EcosystemCallouts_tile__4XBee:nth-last-child(2) {
+    border-bottom-width: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .EcosystemCallouts_tile__4XBee:nth-child(2n) {
+    border-left-width: 0;
+  }
+  .EcosystemCallouts_tile__4XBee:nth-child(3n + 2) {
+    border-left-width: 1px;
+    border-right-width: 1px;
+  }
+  .EcosystemCallouts_tile__4XBee:nth-last-child(2),
+  .EcosystemCallouts_tile__4XBee:nth-last-child(3) {
+    border-bottom-width: 0;
+  }
+}
+.EcosystemCallouts_tile__4XBee svg {
+  --tw-grayscale: grayscale(100%);
+}
+.EcosystemCallouts_tile__4XBee svg,
+.EcosystemCallouts_tile__4XBee:hover svg {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+.EcosystemCallouts_tile__4XBee:hover svg {
+  opacity: 1;
+  --tw-grayscale: grayscale(0);
 }
 
-.BackgroundGlow_glow1__bDz7X {
-    background-image: linear-gradient(to right,var(--tw-gradient-stops));
-    --tw-gradient-from: #e672f7;
-    --tw-gradient-to: rgba(230,114,247,0);
-    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
-    --tw-gradient-to: #5252ff;
-    filter: blur(200px);
-    animation-duration: 23s;
-    animation-name: BackgroundGlow_glow1Anim__gEJoL;
-    width: 616px;
-    height: 616px;
-    margin-top: -344px;
-    margin-right: -376px;
+.BackgroundGlow_glow2__5Nj0b {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #fb11b8;
+  --tw-gradient-to: rgba(251, 17, 184, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5252ff;
+  filter: blur(250px);
+  animation-duration: 6s;
+  animation-name: BackgroundGlow_glow2Anim__LrGGp;
+  width: 500px;
+  height: 500px;
+  margin-top: 0;
+  margin-right: 0;
+}
+.BackgroundGlow_glow__OIbSB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+/* .BackgroundGlow_glow1__bDz7X {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #e672f7;
+  --tw-gradient-to: rgba(230, 114, 247, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5252ff;
+  filter: blur(600px);
+  animation-duration: 23s;
+  animation-name: BackgroundGlow_glow1Anim__gEJoL;
+  width: 616px;
+  height: 616px;
+  margin-top: -344px;
+  margin-right: -376px;
 } */
 
-/* .BackgroundGlow_radar__oFQmz {
+.BackgroundGlow_radar__oFQmz {
     position: absolute;
     z-index: 0;
     width: 1600px;
@@ -56,5 +207,4 @@
     animation-name: BackgroundGlow_radarAnim__TpXAJ;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
-} */
-
+}
