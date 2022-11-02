@@ -109,7 +109,7 @@ export default function Home() {
       <main className=" bg-gradient-to-b from-[#fff] to-[#fff] dark:from-[#1A0B29] dark:via-[#07000A]  dark:to-[#241731]">
         <div></div>
 
-        <div className=" z-100 fixed top-0 z-10 flex  w-full items-center justify-between bg-white/20 py-2 px-6 dark:bg-black/20 md:px-12">
+        <div className=" z-100 fixed top-0 z-10 flex  w-full items-center justify-between py-2 px-6 dark:bg-black/50 md:px-12 backdrop-blur">
           <Image src="/image/logo.png" alt="" width={90} height={60} />
           <ThemeSwitch />
         </div>
