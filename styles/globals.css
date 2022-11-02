@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -163,7 +162,7 @@
   --tw-gradient-to: rgba(251, 17, 184, 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #5252ff;
-  filter: blur(250px);
+  filter: blur(260px);
   animation-duration: 6s;
   animation-name: BackgroundGlow_glow2Anim__LrGGp;
   width: 500px;
