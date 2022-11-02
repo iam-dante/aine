@@ -10,7 +10,7 @@ export default function Home() {
         checked={enabled}
         onChange={setEnabled}
         className={`${
-          enabled ? "bg-gray-400" : "bg-pink-800"
+          enabled ? "bg-gray-300" : "bg-pink-800"
         } relative inline-flex h-9 w-16 items-center rounded-full`}
       >
         <span
@@ -54,9 +54,26 @@ export default function Home() {
     );
   }
 
+  function Achieve(props: { num: number; title: string; icon: JSX.Element }) {
+    return (
+      <div className="flex items-center justify-center space-x-4">
+        <div className="flex items-center justify-center rounded-r-full bg-pink-50 p-5 dark:bg-gray-700/40">
+          {props.icon}
+        </div>
+
+        <div className="flex flex-col items-center space-y-4">
+          <h1 className="text-4xl font-bold text-pink-600 dark:text-white">
+            {props.num}+
+          </h1>
+          <h1 className="font-jose text-2xl dark:text-white">{props.title}</h1>
+        </div>
+      </div>
+    );
+  }
+
   function Chips(props: { name: string }) {
     return (
-      <span className=" dark:bg-transparent flex items-center justify-center rounded-full border border-pink-200 bg-gray-100/70 px-2.5 py-2 text-xs dark:text-white md:text-base">
+      <span className=" flex items-center justify-center rounded-full border border-pink-200 bg-gray-100/70 px-2.5 py-2 text-xs dark:bg-transparent dark:text-white md:text-base">
         {props.name}
       </span>
     );
@@ -64,7 +81,7 @@ export default function Home() {
 
   function Cards(props: { name: string; icon: any; dec: string }) {
     return (
-      <div className="flex flex-col  items-center justify-center space-y-4 bg-white p-12  shadow-pink-300/20 hover:shadow-2xl hover:shadow-pink-400/40 bg-transparent">
+      <div className="flex flex-col  items-center justify-center space-y-4 bg-white bg-transparent  p-12 shadow-pink-300/20 hover:shadow-2xl dark:hover:shadow-pink-400">
         {props.icon}
         <h1 className="text-2xl dark:text-white">{props.name}</h1>
         <h1 className="text-center text-slate-500 dark:text-white">
@@ -74,10 +91,10 @@ export default function Home() {
     );
   }
 
-
-
   return (
-    <body className={`${enabled ? "" : "dark"} h-auto overflow-x-hidden relative`}>
+    <div
+      className={`${enabled ? "" : "dark"} relative h-auto overflow-x-hidden`}
+    >
       <main className=" bg-gradient-to-b from-[#fff] to-[#fff] dark:from-[#1A0B29] dark:to-[#07000A]">
         <div className=" z-100 fixed top-0 z-10 flex  w-full items-center justify-between bg-white/20 py-2 px-6 dark:bg-black/20 md:px-12">
           <Image src="/image/logo.png" alt="" width={90} height={60} />
@@ -254,8 +271,76 @@ export default function Home() {
               />
             </div>
           </div>
+
+          <div className="h-auto w-full py-12 ">
+            <h1 className="text-center text-3xl dark:text-white">
+              Our Achivements
+            </h1>
+            <div className="grid w-full grid-cols-1 gap-12 py-12 md:grid-cols-3">
+              <Achieve
+                title="Clients"
+                num={14}
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="h-12 w-12 text-pink-700 dark:text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
+                    />
+                  </svg>
+                }
+              />
+              <Achieve
+                title="Projects"
+                num={38}
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="h-12 w-12 text-pink-700 dark:text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"
+                    />
+                  </svg>
+                }
+              />
+              <Achieve
+                title="Feedbacks"
+                num={40}
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-1o h-10 text-pink-700 dark:text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                    />
+                  </svg>
+                }
+              />
+            </div>
+          </div>
         </div>
       </main>
-    </body>
+    </div>
   );
 }
