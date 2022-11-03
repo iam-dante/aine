@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["DM Sans", "sans-serif"],
+      sans: ["Open Sans", "sans-serif"],
       work: ["Work Sans", "sans-serif"],
       cardo: ["Cardo", "serif"],
+      leg: ["League Spartan", "sans-serif"],
     },
   },
   plugins: [],
