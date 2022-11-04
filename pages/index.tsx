@@ -23,7 +23,7 @@ function FaceBookIcon() {
     );
   }
 
-function TwitterIcon(props) {
+function TwitterIcon() {
     return (
       <svg
         width="21"
@@ -41,7 +41,7 @@ function TwitterIcon(props) {
     );
   }
 
- function InstagramIcon(props) {
+ function InstagramIcon() {
     return (
       <svg
         width="19"
