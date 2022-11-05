@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Switch } from "@headlessui/react";
 import { useState } from "react";
+import Script from "next/script";
 
 export default function Home() {
   const [enabled, setEnabled] = useState(true);
@@ -147,7 +148,7 @@ function TwitterIcon() {
 
   function Chips(props: { name: string }) {
     return (
-      <span className=" flex items-center justify-center rounded-full border border-pink-200 bg-gray-100/70 px-2.5 py-2 text-xs dark:bg-transparent dark:text-white md:text-base">
+      <span className=" flex items-center justify-center rounded-full border border-pink-200 bg-gray-100/70 px-1 md:w-48 py-2 text-xs dark:bg-transparent dark:text-white md:text-base">
         #{props.name}
       </span>
     );
@@ -172,6 +173,20 @@ function TwitterIcon() {
 
         <h1 className="text-2xl dark:text-white">{props.name}</h1>
         <h1 className="text-slate-500 dark:text-white">{props.dec}</h1>
+      </div>
+    );
+  }
+
+  function Card_(props: { name: string; icon: any; dec: string }) {
+    return (
+      <div className="flex flex-col  justify-center space-y-4 bg-white bg-transparent  p-12 shadow-md">
+        
+        {props.icon}
+
+        <h1 className="text-2xl dark:text-white">{props.name}</h1>
+        <h1 className="text-slate-500 dark:text-white">
+          {props.dec}
+        </h1>
       </div>
     );
   }
@@ -220,10 +235,10 @@ function TwitterIcon() {
         <div className="BackgroundGlow_radar__oFQmz"></div>
 
         <div className="pt-48 lg:px-48">
-          <div className="p-12">
+          <div className="p-4">
             <div className="py-8">
               <h1 className="font-cardo  text-5xl leading-[56px] dark:text-white sm:text-[64px] sm:font-light sm:leading-[72px]">
-                A partner who can <br></br>empower community.
+                A partner who can empower <br></br> community.
               </h1>
             </div>
 
@@ -232,7 +247,7 @@ function TwitterIcon() {
               opportunities across a variety of channels in real time.
             </p> */}
 
-            <div className="flex flex-col justify-start space-y-4 md:w-1/2">
+            <div className="flex flex-col justify-start space-y-4 md:w-4/6">
               <div className="grid grid-cols-3 items-center  gap-2 overflow-auto md:grid-cols-4 md:gap-4">
                 <Chips name="strategy" />
                 <Chips name="digital marketing" />
@@ -245,7 +260,89 @@ function TwitterIcon() {
               </div>
             </div>
           </div>
-          <div className="h-auto py-12 px-4 md:p-12 ">
+          <div className="mt-24 py-12">
+            <div className="flex flex-col items-center justify-center space-y-4">
+              <h1 className="text-center  text-3xl  dark:text-white ">
+                We combine
+              </h1>
+              <h1 className="flex flex-col text-center text-3xl dark:text-white md:flex-row">
+                the powers of{" "}
+                <h1 className="ml-2 font-bold">Marketing & Technology</h1>
+              </h1>
+              <h1 className="px-4 text-center text-slate-500 dark:text-white md:w-3/6 md:text-lg">
+                We believe for businesses to grow, marketing is the KEY pioneer.
+                So our work is centered on using technology to do creative
+                marketing.
+              </h1>
+            </div>
+            <div className="mt-24 grid w-full grid-cols-1 gap-2 md:grid-cols-2 md:gap-8 xl:grid-cols-3 ">
+              <Card_
+                name="Statregy"
+                dec="Before goals are put into action, a plan is essential. We
+                  tailor a plan specific to your needs that helps attain the
+                  desired goals through selected marketing channels."
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="h-12 w-12 rounded-full  px-2 py-2 text-red-500 dark:bg-transparent dark:text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+                    />
+                  </svg>
+                }
+              />
+
+              <Card_
+                name="Creativity"
+                dec="Having the plan ready, we love to add a touch of creativity. Creativity speaks beyond words and sets your business apart from competitors. This is the salt to strategy."
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="h-10 w-10  text-red-500 dark:bg-transparent dark:text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+                    />
+                  </svg>
+                }
+              />
+
+              <Card_
+                name="Execution"
+                dec="With strategy that has a touch of creativity, we get into the actual moves, creative Execution. We help you get the actual marketing done driven by technology."
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="h-10 w-10  text-red-500 dark:bg-transparent dark:text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5"
+                    />
+                  </svg>
+                }
+              />
+            </div>
+          </div>
+          <div className="h-auto py-12 px-2 md:p-12 ">
             <div className="flex flex-col items-center justify-center space-y-4">
               <h1 className="text-center text-3xl dark:text-white">
                 We grow business
@@ -542,7 +639,7 @@ function TwitterIcon() {
           </div>
         </div>
         <>
-          <div className="grid w-full  grid-cols-1 gap-8 md:grid-cols-3 py-24 px-[10%]">
+          <div className="grid w-full  grid-cols-1 gap-8 py-24 px-[10%] md:grid-cols-3">
             <div className="flex flex-col items-center justify-center  space-y-4 dark:text-white">
               <h1 className="text-lg font-semibold">Contanct Us</h1>
               <h1>Call/WhatsApp: +255 712 288 000</h1>
@@ -565,8 +662,8 @@ function TwitterIcon() {
             </div>
           </div>
 
-          <div className="bg-slate-500 py-2 text-white">
-            <h1 className="text-center text-xs">
+          <div className="bg-slate-600 py-2 text-white dark:bg-black px-2">
+            <h1 className="text-center text-[9px] md:text-xs">
               BUILDING DIGITAL SOLUTIONS FOR BUSINESSES | © ALL RIGHTS RESERVED
               BY AINE DIGITAL GROUP
             </h1>
