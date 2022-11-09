@@ -6,7 +6,7 @@ import Script from "next/script";
 export default function Home() {
   const [enabled, setEnabled] = useState(true);
 
-function FaceBookIcon() {
+  function FaceBookIcon() {
     return (
       <svg
         width="23"
@@ -24,7 +24,24 @@ function FaceBookIcon() {
     );
   }
 
-function TwitterIcon() {
+  function LinkedIn(){
+    return (
+      <svg
+        width="22"
+        height="22"
+        className="hover:text-sky-700"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M44.4567 0H3.54333C2.60358 0 1.70232 0.373315 1.03782 1.03782C0.373315 1.70232 0 2.60358 0 3.54333V44.4567C0 45.3964 0.373315 46.2977 1.03782 46.9622C1.70232 47.6267 2.60358 48 3.54333 48H44.4567C45.3964 48 46.2977 47.6267 46.9622 46.9622C47.6267 46.2977 48 45.3964 48 44.4567V3.54333C48 2.60358 47.6267 1.70232 46.9622 1.03782C46.2977 0.373315 45.3964 0 44.4567 0ZM14.3067 40.89H7.09V17.9667H14.3067V40.89ZM10.6933 14.79C9.87473 14.7854 9.07583 14.5384 8.39747 14.0802C7.71911 13.622 7.19168 12.9731 6.88175 12.2154C6.57183 11.4577 6.4933 10.6252 6.65606 9.82291C6.81883 9.02063 7.2156 8.28455 7.79631 7.70756C8.37702 7.13057 9.11563 6.73853 9.91893 6.58092C10.7222 6.42331 11.5542 6.50719 12.3099 6.82197C13.0656 7.13675 13.7111 7.66833 14.1649 8.34962C14.6188 9.03092 14.8606 9.83138 14.86 10.65C14.8677 11.1981 14.765 11.7421 14.558 12.2496C14.351 12.7571 14.044 13.2178 13.6551 13.6041C13.2663 13.9905 12.8037 14.2946 12.2948 14.4983C11.786 14.702 11.2413 14.8012 10.6933 14.79ZM40.9067 40.91H33.6933V28.3867C33.6933 24.6933 32.1233 23.5533 30.0967 23.5533C27.9567 23.5533 25.8567 25.1667 25.8567 28.48V40.91H18.64V17.9833H25.58V21.16H25.6733C26.37 19.75 28.81 17.34 32.5333 17.34C36.56 17.34 40.91 19.73 40.91 26.73L40.9067 40.91Z"
+          fill="currentColor"
+        />
+      </svg>
+    );
+  }
+  function TwitterIcon() {
     return (
       <svg
         width="21"
@@ -42,7 +59,7 @@ function TwitterIcon() {
     );
   }
 
- function InstagramIcon() {
+  function InstagramIcon() {
     return (
       <svg
         width="19"
@@ -148,8 +165,8 @@ function TwitterIcon() {
 
   function Chips(props: { name: string }) {
     return (
-      <span className=" flex items-center justify-center rounded-full border border-pink-200 bg-gray-100/70 px-1 md:w-48 py-2 text-xs dark:bg-transparent dark:text-white md:text-base">
-        #{props.name}
+      <span className=" flex items-center justify-center rounded-full border border-pink-200 bg-gray-100/70 px-1 py-2 text-xs dark:bg-transparent dark:text-white md:w-48 md:text-base">
+        {props.name}
       </span>
     );
   }
@@ -180,13 +197,10 @@ function TwitterIcon() {
   function Card_(props: { name: string; icon: any; dec: string }) {
     return (
       <div className="flex flex-col  justify-center space-y-4 bg-white bg-transparent  p-12 shadow-md">
-        
         {props.icon}
 
         <h1 className="text-2xl dark:text-white">{props.name}</h1>
-        <h1 className="text-slate-500 dark:text-white">
-          {props.dec}
-        </h1>
+        <h1 className="text-slate-500 dark:text-white">{props.dec}</h1>
       </div>
     );
   }
@@ -198,7 +212,7 @@ function TwitterIcon() {
       <main className=" bg-gradient-to-b from-[#fff] to-[#fff] dark:from-[#e45c82] dark:via-[#07000A]  dark:to-[#0e0004]">
         <div></div>
 
-        <div className=" z-100 fixed top-0 z-10 flex  w-full items-center justify-between  px-6 backdrop-blur dark:bg-black/50 md:px-12">
+        <div className=" z-100 fixed top-0 z-10 flex  w-full items-center justify-between  px-6 backdrop-blur dark:bg-black/10 md:px-12">
           {/* <Image src="/image/logo.png" alt="" width={90} height={60} /> */}
           <svg
             className="h-24 w-24 dark:text-white"
@@ -237,7 +251,7 @@ function TwitterIcon() {
         <div className="pt-48 lg:px-48">
           <div className="p-4">
             <div className="py-8">
-              <h1 className="font-cardo  text-5xl leading-[56px] dark:text-white sm:text-[64px] sm:font-light sm:leading-[72px]">
+              <h1 className="font-leg  text-5xl leading-[56px] dark:text-white sm:text-[64px] sm:font-light sm:leading-[72px]">
                 A partner who can empower <br></br> community.
               </h1>
             </div>
@@ -248,25 +262,21 @@ function TwitterIcon() {
             </p> */}
 
             <div className="flex flex-col justify-start space-y-4 md:w-4/6">
-              <div className="grid grid-cols-3 items-center  gap-2 overflow-auto md:grid-cols-4 md:gap-4">
-                <Chips name="strategy" />
-                <Chips name="digital marketing" />
-                <Chips name="content" />
-                <Chips name="creativity" />
-                <Chips name="digitalstrategy" />
-                <Chips name="business" />
-                <Chips name="technology" />
-                <Chips name="growth" />
+              <div className="items-centeroverflow-auto md:grid-cols-4 md:gap-4">
+                <h1 className="dark:text-white">
+                  #strategy #digital #marketing #content #creativity
+                  #digitalstrategy <br></br> #technology #businesses #growth
+                </h1>
               </div>
             </div>
           </div>
           <div className="mt-24 py-12">
             <div className="flex flex-col items-center justify-center space-y-4">
               <h1 className="text-center  text-3xl  dark:text-white ">
-                We combine
+                We combinethe powers of
               </h1>
               <h1 className="flex flex-col text-center text-3xl dark:text-white md:flex-row">
-                the powers of{" "}
+                {" "}
                 <h1 className="ml-2 font-bold">Marketing & Technology</h1>
               </h1>
               <h1 className="px-4 text-center text-slate-500 dark:text-white md:w-3/6 md:text-lg">
@@ -279,7 +289,7 @@ function TwitterIcon() {
               <Card_
                 name="Statregy"
                 dec="Before goals are put into action, a plan is essential. We
-                  tailor a plan specific to your needs that helps attain the
+                  tailor a plan specific to your needs that helps you attain the
                   desired goals through selected marketing channels."
                 icon={
                   <svg
@@ -489,7 +499,7 @@ function TwitterIcon() {
 
           <div className="h-auto w-full py-12 ">
             <h1 className="text-center font-leg text-3xl font-semibold uppercase text-slate-600 dark:text-white">
-              Our Achivements
+              OUR ACHIEVEMENTS
             </h1>
             <div className="grid w-full grid-cols-1 gap-12 py-12 md:grid-cols-3">
               <Achieve
@@ -639,30 +649,57 @@ function TwitterIcon() {
           </div>
         </div>
         <>
-          <div className="grid w-full  grid-cols-1 gap-8 py-24 px-[10%] md:grid-cols-3">
+          <div className="grid w-full  grid-cols-1 gap-8 py-24 px-[10%] md:grid-cols-2">
             <div className="flex flex-col items-center justify-center  space-y-4 dark:text-white">
               <h1 className="text-lg font-semibold">Contanct Us</h1>
-              <h1>Call/WhatsApp: +255 712 288 000</h1>
-              <h1>Email: business@email.com</h1>
+              <h1>
+                Call/WhatsApp:<a href="tel:+255629687178">+255629687178</a>
+              </h1>
+              <h1>
+                Email:{" "}
+                <a href="mailto:ainedigitalgroup@gmail.com">
+                  ainedigitalgroup@gmail.com
+                </a>
+              </h1>
             </div>
 
-            <div className=" flex flex-col items-center justify-center space-y-4 dark:text-white">
+            {/* <div className=" flex flex-col items-center justify-center space-y-4 dark:text-white">
               <h1 className="text-lg font-semibold">Offices</h1>
               <h1>Dar es salaam, Tanzania</h1>
               <h1>View on Google Maps</h1>
-            </div>
+            </div> */}
 
             <div className="flex flex-col items-center justify-center space-y-4 dark:text-white">
-              <h1 className="text-lg font-semibold">Grow with Us</h1>
+              <h1 className="text-lg font-semibold">Social Media</h1>
               <div className="flex items-center space-x-8">
-                <FaceBookIcon />
-                <TwitterIcon />
-                <InstagramIcon />
+                <a
+                  href="https://web.facebook.com/ainedigitalgroup"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  <FaceBookIcon />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/ainedigitalgroup?r=nametag"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  <InstagramIcon />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/aine-digital-group/"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  <LinkedIn />
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="bg-slate-600 py-2 text-white dark:bg-black px-2">
+          <div className="bg-slate-600 py-2 px-2 text-white dark:bg-black">
             <h1 className="text-center text-[9px] md:text-xs">
               BUILDING DIGITAL SOLUTIONS FOR BUSINESSES | © ALL RIGHTS RESERVED
               BY AINE DIGITAL GROUP
