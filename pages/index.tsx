@@ -251,29 +251,29 @@ export default function Home() {
         <div className="pt-48 lg:px-48">
           <div className="p-4">
             <div className="py-8">
-              <h1 className="font-leg  text-5xl leading-[56px] dark:text-white sm:text-[64px] sm:font-light sm:leading-[72px]">
-                A partner who can empower <br></br> community.
+              <h1 className="font-leg  text-5xl leading-[56px] dark:text-white  sm:font-light sm:leading-[72px]">
+                A partner who can help you take advantage of <br></br>marketing
+                opportunities across a variety of channel in real time
               </h1>
             </div>
-
             {/* <p className="max-w-[650px] border-t py-8 text-xl dark:text-white">
               A partner who can help you take advantage of marketing
               opportunities across a variety of channels in real time.
             </p> */}
-
             <div className="flex flex-col justify-start space-y-4 md:w-4/6">
               <div className="items-centeroverflow-auto md:grid-cols-4 md:gap-4">
-                <h1 className="dark:text-white">
+                <h1 className="text-xl dark:text-white">
                   #strategy #digital #marketing #content #creativity
                   #digitalstrategy <br></br> #technology #businesses #growth
                 </h1>
               </div>
             </div>
+          
           </div>
           <div className="mt-24 py-12">
             <div className="flex flex-col items-center justify-center space-y-4">
               <h1 className="text-center  text-3xl  dark:text-white ">
-                We combinethe powers of
+                We combine the powers of
               </h1>
               <h1 className="flex flex-col text-center text-3xl dark:text-white md:flex-row">
                 {" "}
@@ -651,7 +651,7 @@ export default function Home() {
         <>
           <div className="grid w-full  grid-cols-1 gap-8 py-24 px-[10%] md:grid-cols-2">
             <div className="flex flex-col items-center justify-center  space-y-4 dark:text-white">
-              <h1 className="text-lg font-semibold">Contanct Us</h1>
+              <h1 className="text-lg font-semibold">Contact Us</h1>
               <h1>
                 Call/WhatsApp:<a href="tel:+255629687178">+255629687178</a>
               </h1>
