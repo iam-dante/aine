@@ -253,7 +253,7 @@ export default function Home() {
             <div className="py-8">
               <h1 className="font-leg  text-5xl leading-[56px] dark:text-white  sm:font-light sm:leading-[72px]">
                 A partner who can help you take advantage of <br></br>marketing
-                opportunities across a variety of channel in real time
+                opportunities across a variety of channels in real time
               </h1>
             </div>
             {/* <p className="max-w-[650px] border-t py-8 text-xl dark:text-white">
@@ -268,7 +268,6 @@ export default function Home() {
                 </h1>
               </div>
             </div>
-          
           </div>
           <div className="mt-24 py-12">
             <div className="flex flex-col items-center justify-center space-y-4">
@@ -355,7 +354,7 @@ export default function Home() {
           <div className="h-auto py-12 px-2 md:p-12 ">
             <div className="flex flex-col items-center justify-center space-y-4">
               <h1 className="text-center text-3xl dark:text-white">
-                We grow business
+                We grow businesses
               </h1>
               <div className="grid grid-cols-3 items-center  gap-2 overflow-auto md:grid-cols-3 md:gap-4">
                 <Chips name="branding" />
@@ -653,7 +652,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center  space-y-4 dark:text-white">
               <h1 className="text-lg font-semibold">Contact Us</h1>
               <h1>
-                Call/WhatsApp:<a href="tel:+255629687178">+255629687178</a>
+                Call/WhatsApp:<a href="tel:+255629687178">+255657308690</a>
               </h1>
               <h1>
                 Email:{" "}
